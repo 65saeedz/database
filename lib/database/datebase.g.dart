@@ -12,11 +12,7 @@ class $UserTable extends User with TableInfo<$UserTable, UserData> {
   @override
   late final GeneratedColumn<int> id = GeneratedColumn<int>(
       'id', aliasedName, false,
-      hasAutoIncrement: true,
-      type: DriftSqlType.int,
-      requiredDuringInsert: false,
-      defaultConstraints:
-          GeneratedColumn.constraintIsAlways('PRIMARY KEY AUTOINCREMENT'));
+      type: DriftSqlType.int, requiredDuringInsert: true);
   static const VerificationMeta _userNameMeta =
       const VerificationMeta('userName');
   @override
@@ -56,6 +52,8 @@ class $UserTable extends User with TableInfo<$UserTable, UserData> {
     final data = instance.toColumns(true);
     if (data.containsKey('id')) {
       context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
     }
     if (data.containsKey('user_name')) {
       context.handle(_userNameMeta,
@@ -87,7 +85,7 @@ class $UserTable extends User with TableInfo<$UserTable, UserData> {
   }
 
   @override
-  Set<GeneratedColumn> get $primaryKey => {id};
+  Set<GeneratedColumn> get $primaryKey => const {};
   @override
   UserData map(Map<String, dynamic> data, {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
@@ -212,20 +210,24 @@ class UserCompanion extends UpdateCompanion<UserData> {
   final Value<String> firstName;
   final Value<String> lastName;
   final Value<DateTime> dateOfTime;
+  final Value<int> rowid;
   const UserCompanion({
     this.id = const Value.absent(),
     this.userName = const Value.absent(),
     this.firstName = const Value.absent(),
     this.lastName = const Value.absent(),
     this.dateOfTime = const Value.absent(),
+    this.rowid = const Value.absent(),
   });
   UserCompanion.insert({
-    this.id = const Value.absent(),
+    required int id,
     required String userName,
     required String firstName,
     required String lastName,
     required DateTime dateOfTime,
-  })  : userName = Value(userName),
+    this.rowid = const Value.absent(),
+  })  : id = Value(id),
+        userName = Value(userName),
         firstName = Value(firstName),
         lastName = Value(lastName),
         dateOfTime = Value(dateOfTime);
@@ -235,6 +237,7 @@ class UserCompanion extends UpdateCompanion<UserData> {
     Expression<String>? firstName,
     Expression<String>? lastName,
     Expression<DateTime>? dateOfTime,
+    Expression<int>? rowid,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
@@ -242,6 +245,7 @@ class UserCompanion extends UpdateCompanion<UserData> {
       if (firstName != null) 'first_name': firstName,
       if (lastName != null) 'last_name': lastName,
       if (dateOfTime != null) 'date_of_brith': dateOfTime,
+      if (rowid != null) 'rowid': rowid,
     });
   }
 
@@ -250,13 +254,15 @@ class UserCompanion extends UpdateCompanion<UserData> {
       Value<String>? userName,
       Value<String>? firstName,
       Value<String>? lastName,
-      Value<DateTime>? dateOfTime}) {
+      Value<DateTime>? dateOfTime,
+      Value<int>? rowid}) {
     return UserCompanion(
       id: id ?? this.id,
       userName: userName ?? this.userName,
       firstName: firstName ?? this.firstName,
       lastName: lastName ?? this.lastName,
       dateOfTime: dateOfTime ?? this.dateOfTime,
+      rowid: rowid ?? this.rowid,
     );
   }
 
@@ -278,6 +284,9 @@ class UserCompanion extends UpdateCompanion<UserData> {
     if (dateOfTime.present) {
       map['date_of_brith'] = Variable<DateTime>(dateOfTime.value);
     }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
     return map;
   }
 
@@ -288,7 +297,8 @@ class UserCompanion extends UpdateCompanion<UserData> {
           ..write('userName: $userName, ')
           ..write('firstName: $firstName, ')
           ..write('lastName: $lastName, ')
-          ..write('dateOfTime: $dateOfTime')
+          ..write('dateOfTime: $dateOfTime, ')
+          ..write('rowid: $rowid')
           ..write(')'))
         .toString();
   }
@@ -306,11 +316,12 @@ abstract class _$AppDb extends GeneratedDatabase {
 }
 
 typedef $$UserTableInsertCompanionBuilder = UserCompanion Function({
-  Value<int> id,
+  required int id,
   required String userName,
   required String firstName,
   required String lastName,
   required DateTime dateOfTime,
+  Value<int> rowid,
 });
 typedef $$UserTableUpdateCompanionBuilder = UserCompanion Function({
   Value<int> id,
@@ -318,6 +329,7 @@ typedef $$UserTableUpdateCompanionBuilder = UserCompanion Function({
   Value<String> firstName,
   Value<String> lastName,
   Value<DateTime> dateOfTime,
+  Value<int> rowid,
 });
 
 class $$UserTableTableManager extends RootTableManager<
@@ -344,6 +356,7 @@ class $$UserTableTableManager extends RootTableManager<
             Value<String> firstName = const Value.absent(),
             Value<String> lastName = const Value.absent(),
             Value<DateTime> dateOfTime = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
           }) =>
               UserCompanion(
             id: id,
@@ -351,13 +364,15 @@ class $$UserTableTableManager extends RootTableManager<
             firstName: firstName,
             lastName: lastName,
             dateOfTime: dateOfTime,
+            rowid: rowid,
           ),
           getInsertCompanionBuilder: ({
-            Value<int> id = const Value.absent(),
+            required int id,
             required String userName,
             required String firstName,
             required String lastName,
             required DateTime dateOfTime,
+            Value<int> rowid = const Value.absent(),
           }) =>
               UserCompanion.insert(
             id: id,
@@ -365,6 +380,7 @@ class $$UserTableTableManager extends RootTableManager<
             firstName: firstName,
             lastName: lastName,
             dateOfTime: dateOfTime,
+            rowid: rowid,
           ),
         ));
 }

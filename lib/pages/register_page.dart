@@ -14,6 +14,7 @@ class RegisterPage extends StatefulWidget {
 
 class _RegisterPageState extends State<RegisterPage> {
   final GlobalKey formKey = GlobalKey();
+  final TextEditingController _idController = TextEditingController();
   final TextEditingController _dateController = TextEditingController();
   final TextEditingController _userNameController = TextEditingController();
   final TextEditingController _firstNameController = TextEditingController();
@@ -51,6 +52,14 @@ class _RegisterPageState extends State<RegisterPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               const Text('Enter your Info', style: TextStyle(fontSize: 20)),
+              const SizedBox(height: 20),
+              TextFormField(
+                controller: _idController,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'id',
+                ),
+              ),
               const SizedBox(height: 20),
               TextFormField(
                 controller: _userNameController,
@@ -97,6 +106,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     database.add(
                       DatabaseEvent.insertUser(
                         userCompanion: UserCompanion(
+                          id: drift.Value(int.parse(_idController.text)),
                           firstName: drift.Value(_firstNameController.text),
                           lastName: drift.Value(_lastNameController.text),
                           userName: drift.Value(_userNameController.text),

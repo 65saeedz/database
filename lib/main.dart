@@ -1,5 +1,4 @@
 import 'package:database/bloc/database_bloc.dart';
-import 'package:database/pages/register_page.dart';
 import 'package:database/pages/show_users_list.dart';
 import 'package:database/utils/dependcy_injection.dart';
 import 'package:flutter/material.dart';

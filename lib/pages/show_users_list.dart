@@ -52,12 +52,15 @@ class _ShowUsersListPageState extends State<ShowUsersListPage> {
 
                         UserData? userData =
                             await database.getSingelUsers(id: item.id);
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => EditPage(userData: userData),
-                          ),
-                        );
+                        if (context.mounted) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  EditPage(userData: userData),
+                            ),
+                          );
+                        }
                       },
                       onLongPress: () {
                         context

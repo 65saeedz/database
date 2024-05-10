@@ -46,29 +46,29 @@ mixin _$DatabaseEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FetchAllDatabase value) fetchAllDatabase,
-    required TResult Function(_InsertAnItem value) insertUser,
-    required TResult Function(_UpdateAnItem value) updateUser,
-    required TResult Function(_DeleteAnItem value) deleteUser,
-    required TResult Function(_GetSingelUsers value) getSingelUsers,
+    required TResult Function(FetchAllDatabase value) fetchAllDatabase,
+    required TResult Function(InsertAnItem value) insertUser,
+    required TResult Function(UpdateAnItem value) updateUser,
+    required TResult Function(DeleteAnItem value) deleteUser,
+    required TResult Function(GetSingelUsers value) getSingelUsers,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_FetchAllDatabase value)? fetchAllDatabase,
-    TResult? Function(_InsertAnItem value)? insertUser,
-    TResult? Function(_UpdateAnItem value)? updateUser,
-    TResult? Function(_DeleteAnItem value)? deleteUser,
-    TResult? Function(_GetSingelUsers value)? getSingelUsers,
+    TResult? Function(FetchAllDatabase value)? fetchAllDatabase,
+    TResult? Function(InsertAnItem value)? insertUser,
+    TResult? Function(UpdateAnItem value)? updateUser,
+    TResult? Function(DeleteAnItem value)? deleteUser,
+    TResult? Function(GetSingelUsers value)? getSingelUsers,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FetchAllDatabase value)? fetchAllDatabase,
-    TResult Function(_InsertAnItem value)? insertUser,
-    TResult Function(_UpdateAnItem value)? updateUser,
-    TResult Function(_DeleteAnItem value)? deleteUser,
-    TResult Function(_GetSingelUsers value)? getSingelUsers,
+    TResult Function(FetchAllDatabase value)? fetchAllDatabase,
+    TResult Function(InsertAnItem value)? insertUser,
+    TResult Function(UpdateAnItem value)? updateUser,
+    TResult Function(DeleteAnItem value)? deleteUser,
+    TResult Function(GetSingelUsers value)? getSingelUsers,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -110,7 +110,7 @@ class __$$FetchAllDatabaseImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FetchAllDatabaseImpl implements _FetchAllDatabase {
+class _$FetchAllDatabaseImpl implements FetchAllDatabase {
   const _$FetchAllDatabaseImpl();
 
   @override
@@ -170,11 +170,11 @@ class _$FetchAllDatabaseImpl implements _FetchAllDatabase {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FetchAllDatabase value) fetchAllDatabase,
-    required TResult Function(_InsertAnItem value) insertUser,
-    required TResult Function(_UpdateAnItem value) updateUser,
-    required TResult Function(_DeleteAnItem value) deleteUser,
-    required TResult Function(_GetSingelUsers value) getSingelUsers,
+    required TResult Function(FetchAllDatabase value) fetchAllDatabase,
+    required TResult Function(InsertAnItem value) insertUser,
+    required TResult Function(UpdateAnItem value) updateUser,
+    required TResult Function(DeleteAnItem value) deleteUser,
+    required TResult Function(GetSingelUsers value) getSingelUsers,
   }) {
     return fetchAllDatabase(this);
   }
@@ -182,11 +182,11 @@ class _$FetchAllDatabaseImpl implements _FetchAllDatabase {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_FetchAllDatabase value)? fetchAllDatabase,
-    TResult? Function(_InsertAnItem value)? insertUser,
-    TResult? Function(_UpdateAnItem value)? updateUser,
-    TResult? Function(_DeleteAnItem value)? deleteUser,
-    TResult? Function(_GetSingelUsers value)? getSingelUsers,
+    TResult? Function(FetchAllDatabase value)? fetchAllDatabase,
+    TResult? Function(InsertAnItem value)? insertUser,
+    TResult? Function(UpdateAnItem value)? updateUser,
+    TResult? Function(DeleteAnItem value)? deleteUser,
+    TResult? Function(GetSingelUsers value)? getSingelUsers,
   }) {
     return fetchAllDatabase?.call(this);
   }
@@ -194,11 +194,11 @@ class _$FetchAllDatabaseImpl implements _FetchAllDatabase {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FetchAllDatabase value)? fetchAllDatabase,
-    TResult Function(_InsertAnItem value)? insertUser,
-    TResult Function(_UpdateAnItem value)? updateUser,
-    TResult Function(_DeleteAnItem value)? deleteUser,
-    TResult Function(_GetSingelUsers value)? getSingelUsers,
+    TResult Function(FetchAllDatabase value)? fetchAllDatabase,
+    TResult Function(InsertAnItem value)? insertUser,
+    TResult Function(UpdateAnItem value)? updateUser,
+    TResult Function(DeleteAnItem value)? deleteUser,
+    TResult Function(GetSingelUsers value)? getSingelUsers,
     required TResult orElse(),
   }) {
     if (fetchAllDatabase != null) {
@@ -208,8 +208,8 @@ class _$FetchAllDatabaseImpl implements _FetchAllDatabase {
   }
 }
 
-abstract class _FetchAllDatabase implements DatabaseEvent {
-  const factory _FetchAllDatabase() = _$FetchAllDatabaseImpl;
+abstract class FetchAllDatabase implements DatabaseEvent {
+  const factory FetchAllDatabase() = _$FetchAllDatabaseImpl;
 }
 
 /// @nodoc
@@ -245,7 +245,7 @@ class __$$InsertAnItemImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InsertAnItemImpl implements _InsertAnItem {
+class _$InsertAnItemImpl implements InsertAnItem {
   const _$InsertAnItemImpl({required this.userCompanion});
 
   @override
@@ -318,11 +318,11 @@ class _$InsertAnItemImpl implements _InsertAnItem {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FetchAllDatabase value) fetchAllDatabase,
-    required TResult Function(_InsertAnItem value) insertUser,
-    required TResult Function(_UpdateAnItem value) updateUser,
-    required TResult Function(_DeleteAnItem value) deleteUser,
-    required TResult Function(_GetSingelUsers value) getSingelUsers,
+    required TResult Function(FetchAllDatabase value) fetchAllDatabase,
+    required TResult Function(InsertAnItem value) insertUser,
+    required TResult Function(UpdateAnItem value) updateUser,
+    required TResult Function(DeleteAnItem value) deleteUser,
+    required TResult Function(GetSingelUsers value) getSingelUsers,
   }) {
     return insertUser(this);
   }
@@ -330,11 +330,11 @@ class _$InsertAnItemImpl implements _InsertAnItem {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_FetchAllDatabase value)? fetchAllDatabase,
-    TResult? Function(_InsertAnItem value)? insertUser,
-    TResult? Function(_UpdateAnItem value)? updateUser,
-    TResult? Function(_DeleteAnItem value)? deleteUser,
-    TResult? Function(_GetSingelUsers value)? getSingelUsers,
+    TResult? Function(FetchAllDatabase value)? fetchAllDatabase,
+    TResult? Function(InsertAnItem value)? insertUser,
+    TResult? Function(UpdateAnItem value)? updateUser,
+    TResult? Function(DeleteAnItem value)? deleteUser,
+    TResult? Function(GetSingelUsers value)? getSingelUsers,
   }) {
     return insertUser?.call(this);
   }
@@ -342,11 +342,11 @@ class _$InsertAnItemImpl implements _InsertAnItem {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FetchAllDatabase value)? fetchAllDatabase,
-    TResult Function(_InsertAnItem value)? insertUser,
-    TResult Function(_UpdateAnItem value)? updateUser,
-    TResult Function(_DeleteAnItem value)? deleteUser,
-    TResult Function(_GetSingelUsers value)? getSingelUsers,
+    TResult Function(FetchAllDatabase value)? fetchAllDatabase,
+    TResult Function(InsertAnItem value)? insertUser,
+    TResult Function(UpdateAnItem value)? updateUser,
+    TResult Function(DeleteAnItem value)? deleteUser,
+    TResult Function(GetSingelUsers value)? getSingelUsers,
     required TResult orElse(),
   }) {
     if (insertUser != null) {
@@ -356,8 +356,8 @@ class _$InsertAnItemImpl implements _InsertAnItem {
   }
 }
 
-abstract class _InsertAnItem implements DatabaseEvent {
-  const factory _InsertAnItem({required final UserCompanion userCompanion}) =
+abstract class InsertAnItem implements DatabaseEvent {
+  const factory InsertAnItem({required final UserCompanion userCompanion}) =
       _$InsertAnItemImpl;
 
   UserCompanion get userCompanion;
@@ -399,7 +399,7 @@ class __$$UpdateAnItemImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UpdateAnItemImpl implements _UpdateAnItem {
+class _$UpdateAnItemImpl implements UpdateAnItem {
   const _$UpdateAnItemImpl({required this.userCompanion});
 
   @override
@@ -472,11 +472,11 @@ class _$UpdateAnItemImpl implements _UpdateAnItem {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FetchAllDatabase value) fetchAllDatabase,
-    required TResult Function(_InsertAnItem value) insertUser,
-    required TResult Function(_UpdateAnItem value) updateUser,
-    required TResult Function(_DeleteAnItem value) deleteUser,
-    required TResult Function(_GetSingelUsers value) getSingelUsers,
+    required TResult Function(FetchAllDatabase value) fetchAllDatabase,
+    required TResult Function(InsertAnItem value) insertUser,
+    required TResult Function(UpdateAnItem value) updateUser,
+    required TResult Function(DeleteAnItem value) deleteUser,
+    required TResult Function(GetSingelUsers value) getSingelUsers,
   }) {
     return updateUser(this);
   }
@@ -484,11 +484,11 @@ class _$UpdateAnItemImpl implements _UpdateAnItem {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_FetchAllDatabase value)? fetchAllDatabase,
-    TResult? Function(_InsertAnItem value)? insertUser,
-    TResult? Function(_UpdateAnItem value)? updateUser,
-    TResult? Function(_DeleteAnItem value)? deleteUser,
-    TResult? Function(_GetSingelUsers value)? getSingelUsers,
+    TResult? Function(FetchAllDatabase value)? fetchAllDatabase,
+    TResult? Function(InsertAnItem value)? insertUser,
+    TResult? Function(UpdateAnItem value)? updateUser,
+    TResult? Function(DeleteAnItem value)? deleteUser,
+    TResult? Function(GetSingelUsers value)? getSingelUsers,
   }) {
     return updateUser?.call(this);
   }
@@ -496,11 +496,11 @@ class _$UpdateAnItemImpl implements _UpdateAnItem {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FetchAllDatabase value)? fetchAllDatabase,
-    TResult Function(_InsertAnItem value)? insertUser,
-    TResult Function(_UpdateAnItem value)? updateUser,
-    TResult Function(_DeleteAnItem value)? deleteUser,
-    TResult Function(_GetSingelUsers value)? getSingelUsers,
+    TResult Function(FetchAllDatabase value)? fetchAllDatabase,
+    TResult Function(InsertAnItem value)? insertUser,
+    TResult Function(UpdateAnItem value)? updateUser,
+    TResult Function(DeleteAnItem value)? deleteUser,
+    TResult Function(GetSingelUsers value)? getSingelUsers,
     required TResult orElse(),
   }) {
     if (updateUser != null) {
@@ -510,8 +510,8 @@ class _$UpdateAnItemImpl implements _UpdateAnItem {
   }
 }
 
-abstract class _UpdateAnItem implements DatabaseEvent {
-  const factory _UpdateAnItem({required final UserCompanion userCompanion}) =
+abstract class UpdateAnItem implements DatabaseEvent {
+  const factory UpdateAnItem({required final UserCompanion userCompanion}) =
       _$UpdateAnItemImpl;
 
   UserCompanion get userCompanion;
@@ -553,7 +553,7 @@ class __$$DeleteAnItemImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DeleteAnItemImpl implements _DeleteAnItem {
+class _$DeleteAnItemImpl implements DeleteAnItem {
   const _$DeleteAnItemImpl({required this.id});
 
   @override
@@ -624,11 +624,11 @@ class _$DeleteAnItemImpl implements _DeleteAnItem {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FetchAllDatabase value) fetchAllDatabase,
-    required TResult Function(_InsertAnItem value) insertUser,
-    required TResult Function(_UpdateAnItem value) updateUser,
-    required TResult Function(_DeleteAnItem value) deleteUser,
-    required TResult Function(_GetSingelUsers value) getSingelUsers,
+    required TResult Function(FetchAllDatabase value) fetchAllDatabase,
+    required TResult Function(InsertAnItem value) insertUser,
+    required TResult Function(UpdateAnItem value) updateUser,
+    required TResult Function(DeleteAnItem value) deleteUser,
+    required TResult Function(GetSingelUsers value) getSingelUsers,
   }) {
     return deleteUser(this);
   }
@@ -636,11 +636,11 @@ class _$DeleteAnItemImpl implements _DeleteAnItem {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_FetchAllDatabase value)? fetchAllDatabase,
-    TResult? Function(_InsertAnItem value)? insertUser,
-    TResult? Function(_UpdateAnItem value)? updateUser,
-    TResult? Function(_DeleteAnItem value)? deleteUser,
-    TResult? Function(_GetSingelUsers value)? getSingelUsers,
+    TResult? Function(FetchAllDatabase value)? fetchAllDatabase,
+    TResult? Function(InsertAnItem value)? insertUser,
+    TResult? Function(UpdateAnItem value)? updateUser,
+    TResult? Function(DeleteAnItem value)? deleteUser,
+    TResult? Function(GetSingelUsers value)? getSingelUsers,
   }) {
     return deleteUser?.call(this);
   }
@@ -648,11 +648,11 @@ class _$DeleteAnItemImpl implements _DeleteAnItem {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FetchAllDatabase value)? fetchAllDatabase,
-    TResult Function(_InsertAnItem value)? insertUser,
-    TResult Function(_UpdateAnItem value)? updateUser,
-    TResult Function(_DeleteAnItem value)? deleteUser,
-    TResult Function(_GetSingelUsers value)? getSingelUsers,
+    TResult Function(FetchAllDatabase value)? fetchAllDatabase,
+    TResult Function(InsertAnItem value)? insertUser,
+    TResult Function(UpdateAnItem value)? updateUser,
+    TResult Function(DeleteAnItem value)? deleteUser,
+    TResult Function(GetSingelUsers value)? getSingelUsers,
     required TResult orElse(),
   }) {
     if (deleteUser != null) {
@@ -662,8 +662,8 @@ class _$DeleteAnItemImpl implements _DeleteAnItem {
   }
 }
 
-abstract class _DeleteAnItem implements DatabaseEvent {
-  const factory _DeleteAnItem({required final int id}) = _$DeleteAnItemImpl;
+abstract class DeleteAnItem implements DatabaseEvent {
+  const factory DeleteAnItem({required final int id}) = _$DeleteAnItemImpl;
 
   int get id;
   @JsonKey(ignore: true)
@@ -704,7 +704,7 @@ class __$$GetSingelUsersImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$GetSingelUsersImpl implements _GetSingelUsers {
+class _$GetSingelUsersImpl implements GetSingelUsers {
   const _$GetSingelUsersImpl({required this.id});
 
   @override
@@ -776,11 +776,11 @@ class _$GetSingelUsersImpl implements _GetSingelUsers {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FetchAllDatabase value) fetchAllDatabase,
-    required TResult Function(_InsertAnItem value) insertUser,
-    required TResult Function(_UpdateAnItem value) updateUser,
-    required TResult Function(_DeleteAnItem value) deleteUser,
-    required TResult Function(_GetSingelUsers value) getSingelUsers,
+    required TResult Function(FetchAllDatabase value) fetchAllDatabase,
+    required TResult Function(InsertAnItem value) insertUser,
+    required TResult Function(UpdateAnItem value) updateUser,
+    required TResult Function(DeleteAnItem value) deleteUser,
+    required TResult Function(GetSingelUsers value) getSingelUsers,
   }) {
     return getSingelUsers(this);
   }
@@ -788,11 +788,11 @@ class _$GetSingelUsersImpl implements _GetSingelUsers {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_FetchAllDatabase value)? fetchAllDatabase,
-    TResult? Function(_InsertAnItem value)? insertUser,
-    TResult? Function(_UpdateAnItem value)? updateUser,
-    TResult? Function(_DeleteAnItem value)? deleteUser,
-    TResult? Function(_GetSingelUsers value)? getSingelUsers,
+    TResult? Function(FetchAllDatabase value)? fetchAllDatabase,
+    TResult? Function(InsertAnItem value)? insertUser,
+    TResult? Function(UpdateAnItem value)? updateUser,
+    TResult? Function(DeleteAnItem value)? deleteUser,
+    TResult? Function(GetSingelUsers value)? getSingelUsers,
   }) {
     return getSingelUsers?.call(this);
   }
@@ -800,11 +800,11 @@ class _$GetSingelUsersImpl implements _GetSingelUsers {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FetchAllDatabase value)? fetchAllDatabase,
-    TResult Function(_InsertAnItem value)? insertUser,
-    TResult Function(_UpdateAnItem value)? updateUser,
-    TResult Function(_DeleteAnItem value)? deleteUser,
-    TResult Function(_GetSingelUsers value)? getSingelUsers,
+    TResult Function(FetchAllDatabase value)? fetchAllDatabase,
+    TResult Function(InsertAnItem value)? insertUser,
+    TResult Function(UpdateAnItem value)? updateUser,
+    TResult Function(DeleteAnItem value)? deleteUser,
+    TResult Function(GetSingelUsers value)? getSingelUsers,
     required TResult orElse(),
   }) {
     if (getSingelUsers != null) {
@@ -814,8 +814,8 @@ class _$GetSingelUsersImpl implements _GetSingelUsers {
   }
 }
 
-abstract class _GetSingelUsers implements DatabaseEvent {
-  const factory _GetSingelUsers({required final int id}) = _$GetSingelUsersImpl;
+abstract class GetSingelUsers implements DatabaseEvent {
+  const factory GetSingelUsers({required final int id}) = _$GetSingelUsersImpl;
 
   int get id;
   @JsonKey(ignore: true)
