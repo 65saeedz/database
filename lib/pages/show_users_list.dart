@@ -59,11 +59,11 @@ class _ShowUsersListPageState extends State<ShowUsersListPage> {
                           ),
                         );
                       },
-                      // onLongPress: () {
-                      //   context
-                      //       .read<DatabaseBloc>()
-                      //       .add(DatabaseEvent.deleteUser(id: item.id));
-                      // },
+                      onLongPress: () {
+                        context
+                            .read<DatabaseBloc>()
+                            .add(DatabaseEvent.deleteUser(id: item.id));
+                      },
                       child: Column(
                         children: [
                           Text('Id : ${item.id.toString()}'),
