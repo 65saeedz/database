@@ -20,18 +20,27 @@ mixin _$DatabaseEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() fetchAllDatabase,
     required TResult Function(UserCompanion userCompanion) insertUser,
+    required TResult Function(UserCompanion userCompanion) updateUser,
+    required TResult Function(int id) deleteUser,
+    required TResult Function(int id) getSingelUsers,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchAllDatabase,
     TResult? Function(UserCompanion userCompanion)? insertUser,
+    TResult? Function(UserCompanion userCompanion)? updateUser,
+    TResult? Function(int id)? deleteUser,
+    TResult? Function(int id)? getSingelUsers,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchAllDatabase,
     TResult Function(UserCompanion userCompanion)? insertUser,
+    TResult Function(UserCompanion userCompanion)? updateUser,
+    TResult Function(int id)? deleteUser,
+    TResult Function(int id)? getSingelUsers,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +48,27 @@ mixin _$DatabaseEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchAllDatabase value) fetchAllDatabase,
     required TResult Function(_InsertAnItem value) insertUser,
+    required TResult Function(_UpdateAnItem value) updateUser,
+    required TResult Function(_DeleteAnItem value) deleteUser,
+    required TResult Function(_GetSingelUsers value) getSingelUsers,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchAllDatabase value)? fetchAllDatabase,
     TResult? Function(_InsertAnItem value)? insertUser,
+    TResult? Function(_UpdateAnItem value)? updateUser,
+    TResult? Function(_DeleteAnItem value)? deleteUser,
+    TResult? Function(_GetSingelUsers value)? getSingelUsers,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchAllDatabase value)? fetchAllDatabase,
     TResult Function(_InsertAnItem value)? insertUser,
+    TResult Function(_UpdateAnItem value)? updateUser,
+    TResult Function(_DeleteAnItem value)? deleteUser,
+    TResult Function(_GetSingelUsers value)? getSingelUsers,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -114,6 +132,9 @@ class _$FetchAllDatabaseImpl implements _FetchAllDatabase {
   TResult when<TResult extends Object?>({
     required TResult Function() fetchAllDatabase,
     required TResult Function(UserCompanion userCompanion) insertUser,
+    required TResult Function(UserCompanion userCompanion) updateUser,
+    required TResult Function(int id) deleteUser,
+    required TResult Function(int id) getSingelUsers,
   }) {
     return fetchAllDatabase();
   }
@@ -123,6 +144,9 @@ class _$FetchAllDatabaseImpl implements _FetchAllDatabase {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchAllDatabase,
     TResult? Function(UserCompanion userCompanion)? insertUser,
+    TResult? Function(UserCompanion userCompanion)? updateUser,
+    TResult? Function(int id)? deleteUser,
+    TResult? Function(int id)? getSingelUsers,
   }) {
     return fetchAllDatabase?.call();
   }
@@ -132,6 +156,9 @@ class _$FetchAllDatabaseImpl implements _FetchAllDatabase {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchAllDatabase,
     TResult Function(UserCompanion userCompanion)? insertUser,
+    TResult Function(UserCompanion userCompanion)? updateUser,
+    TResult Function(int id)? deleteUser,
+    TResult Function(int id)? getSingelUsers,
     required TResult orElse(),
   }) {
     if (fetchAllDatabase != null) {
@@ -145,6 +172,9 @@ class _$FetchAllDatabaseImpl implements _FetchAllDatabase {
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchAllDatabase value) fetchAllDatabase,
     required TResult Function(_InsertAnItem value) insertUser,
+    required TResult Function(_UpdateAnItem value) updateUser,
+    required TResult Function(_DeleteAnItem value) deleteUser,
+    required TResult Function(_GetSingelUsers value) getSingelUsers,
   }) {
     return fetchAllDatabase(this);
   }
@@ -154,6 +184,9 @@ class _$FetchAllDatabaseImpl implements _FetchAllDatabase {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchAllDatabase value)? fetchAllDatabase,
     TResult? Function(_InsertAnItem value)? insertUser,
+    TResult? Function(_UpdateAnItem value)? updateUser,
+    TResult? Function(_DeleteAnItem value)? deleteUser,
+    TResult? Function(_GetSingelUsers value)? getSingelUsers,
   }) {
     return fetchAllDatabase?.call(this);
   }
@@ -163,6 +196,9 @@ class _$FetchAllDatabaseImpl implements _FetchAllDatabase {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchAllDatabase value)? fetchAllDatabase,
     TResult Function(_InsertAnItem value)? insertUser,
+    TResult Function(_UpdateAnItem value)? updateUser,
+    TResult Function(_DeleteAnItem value)? deleteUser,
+    TResult Function(_GetSingelUsers value)? getSingelUsers,
     required TResult orElse(),
   }) {
     if (fetchAllDatabase != null) {
@@ -244,6 +280,9 @@ class _$InsertAnItemImpl implements _InsertAnItem {
   TResult when<TResult extends Object?>({
     required TResult Function() fetchAllDatabase,
     required TResult Function(UserCompanion userCompanion) insertUser,
+    required TResult Function(UserCompanion userCompanion) updateUser,
+    required TResult Function(int id) deleteUser,
+    required TResult Function(int id) getSingelUsers,
   }) {
     return insertUser(userCompanion);
   }
@@ -253,6 +292,9 @@ class _$InsertAnItemImpl implements _InsertAnItem {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchAllDatabase,
     TResult? Function(UserCompanion userCompanion)? insertUser,
+    TResult? Function(UserCompanion userCompanion)? updateUser,
+    TResult? Function(int id)? deleteUser,
+    TResult? Function(int id)? getSingelUsers,
   }) {
     return insertUser?.call(userCompanion);
   }
@@ -262,6 +304,9 @@ class _$InsertAnItemImpl implements _InsertAnItem {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchAllDatabase,
     TResult Function(UserCompanion userCompanion)? insertUser,
+    TResult Function(UserCompanion userCompanion)? updateUser,
+    TResult Function(int id)? deleteUser,
+    TResult Function(int id)? getSingelUsers,
     required TResult orElse(),
   }) {
     if (insertUser != null) {
@@ -275,6 +320,9 @@ class _$InsertAnItemImpl implements _InsertAnItem {
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchAllDatabase value) fetchAllDatabase,
     required TResult Function(_InsertAnItem value) insertUser,
+    required TResult Function(_UpdateAnItem value) updateUser,
+    required TResult Function(_DeleteAnItem value) deleteUser,
+    required TResult Function(_GetSingelUsers value) getSingelUsers,
   }) {
     return insertUser(this);
   }
@@ -284,6 +332,9 @@ class _$InsertAnItemImpl implements _InsertAnItem {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchAllDatabase value)? fetchAllDatabase,
     TResult? Function(_InsertAnItem value)? insertUser,
+    TResult? Function(_UpdateAnItem value)? updateUser,
+    TResult? Function(_DeleteAnItem value)? deleteUser,
+    TResult? Function(_GetSingelUsers value)? getSingelUsers,
   }) {
     return insertUser?.call(this);
   }
@@ -293,6 +344,9 @@ class _$InsertAnItemImpl implements _InsertAnItem {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchAllDatabase value)? fetchAllDatabase,
     TResult Function(_InsertAnItem value)? insertUser,
+    TResult Function(_UpdateAnItem value)? updateUser,
+    TResult Function(_DeleteAnItem value)? deleteUser,
+    TResult Function(_GetSingelUsers value)? getSingelUsers,
     required TResult orElse(),
   }) {
     if (insertUser != null) {
@@ -309,6 +363,463 @@ abstract class _InsertAnItem implements DatabaseEvent {
   UserCompanion get userCompanion;
   @JsonKey(ignore: true)
   _$$InsertAnItemImplCopyWith<_$InsertAnItemImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateAnItemImplCopyWith<$Res> {
+  factory _$$UpdateAnItemImplCopyWith(
+          _$UpdateAnItemImpl value, $Res Function(_$UpdateAnItemImpl) then) =
+      __$$UpdateAnItemImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({UserCompanion userCompanion});
+}
+
+/// @nodoc
+class __$$UpdateAnItemImplCopyWithImpl<$Res>
+    extends _$DatabaseEventCopyWithImpl<$Res, _$UpdateAnItemImpl>
+    implements _$$UpdateAnItemImplCopyWith<$Res> {
+  __$$UpdateAnItemImplCopyWithImpl(
+      _$UpdateAnItemImpl _value, $Res Function(_$UpdateAnItemImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? userCompanion = freezed,
+  }) {
+    return _then(_$UpdateAnItemImpl(
+      userCompanion: freezed == userCompanion
+          ? _value.userCompanion
+          : userCompanion // ignore: cast_nullable_to_non_nullable
+              as UserCompanion,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateAnItemImpl implements _UpdateAnItem {
+  const _$UpdateAnItemImpl({required this.userCompanion});
+
+  @override
+  final UserCompanion userCompanion;
+
+  @override
+  String toString() {
+    return 'DatabaseEvent.updateUser(userCompanion: $userCompanion)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateAnItemImpl &&
+            const DeepCollectionEquality()
+                .equals(other.userCompanion, userCompanion));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(userCompanion));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateAnItemImplCopyWith<_$UpdateAnItemImpl> get copyWith =>
+      __$$UpdateAnItemImplCopyWithImpl<_$UpdateAnItemImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchAllDatabase,
+    required TResult Function(UserCompanion userCompanion) insertUser,
+    required TResult Function(UserCompanion userCompanion) updateUser,
+    required TResult Function(int id) deleteUser,
+    required TResult Function(int id) getSingelUsers,
+  }) {
+    return updateUser(userCompanion);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchAllDatabase,
+    TResult? Function(UserCompanion userCompanion)? insertUser,
+    TResult? Function(UserCompanion userCompanion)? updateUser,
+    TResult? Function(int id)? deleteUser,
+    TResult? Function(int id)? getSingelUsers,
+  }) {
+    return updateUser?.call(userCompanion);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchAllDatabase,
+    TResult Function(UserCompanion userCompanion)? insertUser,
+    TResult Function(UserCompanion userCompanion)? updateUser,
+    TResult Function(int id)? deleteUser,
+    TResult Function(int id)? getSingelUsers,
+    required TResult orElse(),
+  }) {
+    if (updateUser != null) {
+      return updateUser(userCompanion);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchAllDatabase value) fetchAllDatabase,
+    required TResult Function(_InsertAnItem value) insertUser,
+    required TResult Function(_UpdateAnItem value) updateUser,
+    required TResult Function(_DeleteAnItem value) deleteUser,
+    required TResult Function(_GetSingelUsers value) getSingelUsers,
+  }) {
+    return updateUser(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchAllDatabase value)? fetchAllDatabase,
+    TResult? Function(_InsertAnItem value)? insertUser,
+    TResult? Function(_UpdateAnItem value)? updateUser,
+    TResult? Function(_DeleteAnItem value)? deleteUser,
+    TResult? Function(_GetSingelUsers value)? getSingelUsers,
+  }) {
+    return updateUser?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchAllDatabase value)? fetchAllDatabase,
+    TResult Function(_InsertAnItem value)? insertUser,
+    TResult Function(_UpdateAnItem value)? updateUser,
+    TResult Function(_DeleteAnItem value)? deleteUser,
+    TResult Function(_GetSingelUsers value)? getSingelUsers,
+    required TResult orElse(),
+  }) {
+    if (updateUser != null) {
+      return updateUser(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdateAnItem implements DatabaseEvent {
+  const factory _UpdateAnItem({required final UserCompanion userCompanion}) =
+      _$UpdateAnItemImpl;
+
+  UserCompanion get userCompanion;
+  @JsonKey(ignore: true)
+  _$$UpdateAnItemImplCopyWith<_$UpdateAnItemImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DeleteAnItemImplCopyWith<$Res> {
+  factory _$$DeleteAnItemImplCopyWith(
+          _$DeleteAnItemImpl value, $Res Function(_$DeleteAnItemImpl) then) =
+      __$$DeleteAnItemImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int id});
+}
+
+/// @nodoc
+class __$$DeleteAnItemImplCopyWithImpl<$Res>
+    extends _$DatabaseEventCopyWithImpl<$Res, _$DeleteAnItemImpl>
+    implements _$$DeleteAnItemImplCopyWith<$Res> {
+  __$$DeleteAnItemImplCopyWithImpl(
+      _$DeleteAnItemImpl _value, $Res Function(_$DeleteAnItemImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+  }) {
+    return _then(_$DeleteAnItemImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DeleteAnItemImpl implements _DeleteAnItem {
+  const _$DeleteAnItemImpl({required this.id});
+
+  @override
+  final int id;
+
+  @override
+  String toString() {
+    return 'DatabaseEvent.deleteUser(id: $id)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DeleteAnItemImpl &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeleteAnItemImplCopyWith<_$DeleteAnItemImpl> get copyWith =>
+      __$$DeleteAnItemImplCopyWithImpl<_$DeleteAnItemImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchAllDatabase,
+    required TResult Function(UserCompanion userCompanion) insertUser,
+    required TResult Function(UserCompanion userCompanion) updateUser,
+    required TResult Function(int id) deleteUser,
+    required TResult Function(int id) getSingelUsers,
+  }) {
+    return deleteUser(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchAllDatabase,
+    TResult? Function(UserCompanion userCompanion)? insertUser,
+    TResult? Function(UserCompanion userCompanion)? updateUser,
+    TResult? Function(int id)? deleteUser,
+    TResult? Function(int id)? getSingelUsers,
+  }) {
+    return deleteUser?.call(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchAllDatabase,
+    TResult Function(UserCompanion userCompanion)? insertUser,
+    TResult Function(UserCompanion userCompanion)? updateUser,
+    TResult Function(int id)? deleteUser,
+    TResult Function(int id)? getSingelUsers,
+    required TResult orElse(),
+  }) {
+    if (deleteUser != null) {
+      return deleteUser(id);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchAllDatabase value) fetchAllDatabase,
+    required TResult Function(_InsertAnItem value) insertUser,
+    required TResult Function(_UpdateAnItem value) updateUser,
+    required TResult Function(_DeleteAnItem value) deleteUser,
+    required TResult Function(_GetSingelUsers value) getSingelUsers,
+  }) {
+    return deleteUser(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchAllDatabase value)? fetchAllDatabase,
+    TResult? Function(_InsertAnItem value)? insertUser,
+    TResult? Function(_UpdateAnItem value)? updateUser,
+    TResult? Function(_DeleteAnItem value)? deleteUser,
+    TResult? Function(_GetSingelUsers value)? getSingelUsers,
+  }) {
+    return deleteUser?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchAllDatabase value)? fetchAllDatabase,
+    TResult Function(_InsertAnItem value)? insertUser,
+    TResult Function(_UpdateAnItem value)? updateUser,
+    TResult Function(_DeleteAnItem value)? deleteUser,
+    TResult Function(_GetSingelUsers value)? getSingelUsers,
+    required TResult orElse(),
+  }) {
+    if (deleteUser != null) {
+      return deleteUser(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DeleteAnItem implements DatabaseEvent {
+  const factory _DeleteAnItem({required final int id}) = _$DeleteAnItemImpl;
+
+  int get id;
+  @JsonKey(ignore: true)
+  _$$DeleteAnItemImplCopyWith<_$DeleteAnItemImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetSingelUsersImplCopyWith<$Res> {
+  factory _$$GetSingelUsersImplCopyWith(_$GetSingelUsersImpl value,
+          $Res Function(_$GetSingelUsersImpl) then) =
+      __$$GetSingelUsersImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int id});
+}
+
+/// @nodoc
+class __$$GetSingelUsersImplCopyWithImpl<$Res>
+    extends _$DatabaseEventCopyWithImpl<$Res, _$GetSingelUsersImpl>
+    implements _$$GetSingelUsersImplCopyWith<$Res> {
+  __$$GetSingelUsersImplCopyWithImpl(
+      _$GetSingelUsersImpl _value, $Res Function(_$GetSingelUsersImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+  }) {
+    return _then(_$GetSingelUsersImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetSingelUsersImpl implements _GetSingelUsers {
+  const _$GetSingelUsersImpl({required this.id});
+
+  @override
+  final int id;
+
+  @override
+  String toString() {
+    return 'DatabaseEvent.getSingelUsers(id: $id)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSingelUsersImpl &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetSingelUsersImplCopyWith<_$GetSingelUsersImpl> get copyWith =>
+      __$$GetSingelUsersImplCopyWithImpl<_$GetSingelUsersImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchAllDatabase,
+    required TResult Function(UserCompanion userCompanion) insertUser,
+    required TResult Function(UserCompanion userCompanion) updateUser,
+    required TResult Function(int id) deleteUser,
+    required TResult Function(int id) getSingelUsers,
+  }) {
+    return getSingelUsers(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchAllDatabase,
+    TResult? Function(UserCompanion userCompanion)? insertUser,
+    TResult? Function(UserCompanion userCompanion)? updateUser,
+    TResult? Function(int id)? deleteUser,
+    TResult? Function(int id)? getSingelUsers,
+  }) {
+    return getSingelUsers?.call(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchAllDatabase,
+    TResult Function(UserCompanion userCompanion)? insertUser,
+    TResult Function(UserCompanion userCompanion)? updateUser,
+    TResult Function(int id)? deleteUser,
+    TResult Function(int id)? getSingelUsers,
+    required TResult orElse(),
+  }) {
+    if (getSingelUsers != null) {
+      return getSingelUsers(id);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchAllDatabase value) fetchAllDatabase,
+    required TResult Function(_InsertAnItem value) insertUser,
+    required TResult Function(_UpdateAnItem value) updateUser,
+    required TResult Function(_DeleteAnItem value) deleteUser,
+    required TResult Function(_GetSingelUsers value) getSingelUsers,
+  }) {
+    return getSingelUsers(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchAllDatabase value)? fetchAllDatabase,
+    TResult? Function(_InsertAnItem value)? insertUser,
+    TResult? Function(_UpdateAnItem value)? updateUser,
+    TResult? Function(_DeleteAnItem value)? deleteUser,
+    TResult? Function(_GetSingelUsers value)? getSingelUsers,
+  }) {
+    return getSingelUsers?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchAllDatabase value)? fetchAllDatabase,
+    TResult Function(_InsertAnItem value)? insertUser,
+    TResult Function(_UpdateAnItem value)? updateUser,
+    TResult Function(_DeleteAnItem value)? deleteUser,
+    TResult Function(_GetSingelUsers value)? getSingelUsers,
+    required TResult orElse(),
+  }) {
+    if (getSingelUsers != null) {
+      return getSingelUsers(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetSingelUsers implements DatabaseEvent {
+  const factory _GetSingelUsers({required final int id}) = _$GetSingelUsersImpl;
+
+  int get id;
+  @JsonKey(ignore: true)
+  _$$GetSingelUsersImplCopyWith<_$GetSingelUsersImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
