@@ -1,0 +1,7 @@
+part of 'database_bloc.dart';
+
+@freezed
+class DatabaseEvent with _$DatabaseEvent {
+  const factory DatabaseEvent.fetchAllDatabase() = _FetchAllDatabase;
+  const factory DatabaseEvent.insertUser({required UserCompanion userCompanion}) = _InsertAnItem;
+} 
